@@ -9,6 +9,10 @@ public class LibretaDeNotas {
         Scanner variable = new Scanner(System.in);
         HashMap<String, ArrayList<Double>> alumnosNotas = new HashMap<>();
 
+
+        
+
+        
         System.out.println("Introduce el número de alumnos: ");
         int numeroDeAlumnos = variable.nextInt();
 
@@ -24,7 +28,7 @@ public class LibretaDeNotas {
             for (int j = 0; j < numeroDeNotas; j++) {
                 System.out.println("Introduce la nota " + (j + 1) + " de " + nombre + ": ");
                 double nota = variable.nextDouble();
-                while (nota <= 0 || nota >= 10) { // Validación de nota
+                while (nota < 0 || nota > 10) { // Validación de nota
                     System.out.println("Nota inválida. Introduce una nota entre 0 y 10: ");
                     nota = variable.nextDouble();
                 }
